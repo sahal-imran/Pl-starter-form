@@ -91,7 +91,7 @@ function Form() {
           </MenuItem>
 
           {Drop_Down_Items.map((item, index) => {
-            return <MenuItem value={item.name}>{item.name}</MenuItem>;
+            return <MenuItem key={index} value={item.name}>{item.name}</MenuItem>;
           })}
         </Select>
       </>
