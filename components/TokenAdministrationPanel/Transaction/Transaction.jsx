@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Box from "@mui/system/Box";
 import Topography from "@mui/material/Typography";
 import { Button } from "@mui/material";
-import Custom_Button from "../../Buttons/button";
 
 const Transaction = () => {
   // states
@@ -181,12 +180,57 @@ const Transaction = () => {
               }
         }
       >
-        <Custom_Button color="#D3000D" text="Abort"></Custom_Button>
-        <Custom_Button
-          color="#CC00D3"
-          text="Accept"
-          clicked={Transactions_Valadation}
-        ></Custom_Button>
+        <Button
+          sx={{
+            display: "flex",
+            p: "25px",
+            width: { md: "149px", xs: "200px" },
+            height: "50px",
+            whiteSpace: "noWrap",
+            backgroundColor: `#D3000D`,
+            fontFamily: ["Source Code Pro", "monospace"],
+            fontSize: "16px",
+            lineHeight: "20.11px",
+            textTransform: "capitalize",
+            weight: 600,
+            color: "white",
+            mr: 3,
+            mb: { md: 0, xs: 3 },
+            "&:hover": {
+              boxShadow: "none",
+              background: `#D3000D`,
+            },
+            borderRadius: "unset",
+          }}
+        >
+          Abort
+        </Button>
+        <Button
+          onClick={Transactions_Valadation}
+          sx={{
+            display: "flex",
+            p: "25px",
+            width: { md: "149px", xs: "200px" },
+            height: "50px",
+            whiteSpace: "noWrap",
+            backgroundColor: `#CC00D3`,
+            fontFamily: ["Source Code Pro", "monospace"],
+            fontSize: "16px",
+            lineHeight: "20.11px",
+            textTransform: "capitalize",
+            weight: 600,
+            color: "white",
+            mr: 3,
+            mb: { md: 0, xs: 3 },
+            "&:hover": {
+              boxShadow: "none",
+              background: `#CC00D3`,
+            },
+            borderRadius: "unset",
+          }}
+        >
+          Accept
+        </Button>
       </Box>
     </>
   );
